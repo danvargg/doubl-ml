@@ -3,8 +3,6 @@ import mediapipe as mp
 import numpy as np
 import tensorflow as tf
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
 LABEL_MAP_REV = {0: "tight", 1: "ideal", 2: "relaxed"}
 
 
@@ -15,7 +13,6 @@ class FitPredictor:
         self.pose = mp.solutions.pose.Pose(static_image_mode=True)
 
     def _extract_keypoints(self, image_path: str) -> np.ndarray:
-        print("extracting keypoints...")
         img = cv2.imread(image_path)
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         results = self.pose.process(img_rgb)

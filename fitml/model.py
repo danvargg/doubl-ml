@@ -1,8 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras import layers, Model
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
 
 class Predictor:
     def __init__(self, input_dim, hidden_units=[64, 32], num_classes=3):
