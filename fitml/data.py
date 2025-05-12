@@ -80,7 +80,7 @@ class DataLoader:
                     self.cut_map[cut]
                 ]
 
-                label = np.random.randint(0, 3)
+                label = np.random.randint(0, 3)  # Simulated labels
                 x = np.concatenate([keypoints, user_vec, garment_vec]).astype(np.float32)
                 y = np.array(label, dtype=np.int32)
                 yield x, y
