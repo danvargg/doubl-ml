@@ -10,7 +10,7 @@ def main(
         garment_meta: str = "data/garment.json",
         batch_size: int = 16,
         epochs: int = 10,
-        output_dir: str = "outputs"
+        output_dir: str = "trained_model"
 ) -> None:
     data_loader = DataLoader(
         images_dir=images_dir,

@@ -8,6 +8,8 @@ import tensorflow as tf
 
 from metadata import users, garment
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 
 class DataLoader:
     def __init__(
