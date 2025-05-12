@@ -86,7 +86,6 @@ class DataLoader:
                 yield x, y
 
     def get_dataset(self):
-        print("get dataset")
         x_sample, y_sample = next(self._make_samples())
 
         ds = tf.data.Dataset.from_generator(

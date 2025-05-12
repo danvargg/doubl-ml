@@ -15,16 +15,13 @@
 - `pip install -e .`
 - `python .\fitml\train.py`
 
-
 ## Next steps
 
-- Post-process keypoints to derive more meaningful features
-- Make all paths constants
-- Exception handling
-- Document code
-- Logging by module
-- Inference monitoring
+- Use a transformer model (Hugging Face and later bigger models) to post-process predictions and deliver natural
+  language recommendations
+- Post-process keypoints to derive more meaningful features to improve generalization predictions
+- Turn feature extraction into neural network layers to offload processing from hardware to model
+- Exception handling, code documentation, logging by module
+- Model inference monitoring
 - Experiment tracking
 - Model deployer module
-- Package as library `fitml`
-- Use a transformer model (Hugging Face) to post-process predictions

@@ -6,7 +6,7 @@ class Predictor:
     def __init__(self, input_dim, hidden_units=[64, 32], num_classes=3):
         self.model = self.build_model(input_dim, hidden_units, num_classes)
 
-    def build_model(input_dim, hidden_units=[64, 32], num_classes=3):
+    def build_model(self, input_dim, hidden_units=[64, 32], num_classes=3):
         inputs = tf.keras.Input(shape=(input_dim,), name="features")
         x = inputs
         for i, units in enumerate(hidden_units, start=1):
@@ -27,3 +27,6 @@ class Predictor:
 
     def predict(self, x):
         return self.model(x, training=False)
+
+    def save_model(self, filepath):
+        self.model.save(filepath)
